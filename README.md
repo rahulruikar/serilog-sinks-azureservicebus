@@ -2,6 +2,7 @@
 
 Serilog.Sinks.AzureServiceBus is a Serilog sink that writes logs to a queue on Azure Service Bus.
 
+[![Build Status](https://dev.azure.com/rahulruikar0957/SerilogSinkAzureServiceBus/_apis/build/status/rahulruikar.serilog-sinks-azureservicebus?branchName=master)](https://dev.azure.com/rahulruikar0957/SerilogSinkAzureServiceBus/_build/latest?definitionId=1&branchName=master)
 
 ## Installation
 
