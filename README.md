@@ -16,12 +16,12 @@ dotnet add package Serilog.Sinks.AzureServiceBus
 To use with default settings, add the AzureServiceBus Sink using one of the following methods:
 
 ```c#
-var project = "myProject";
-var collection = "myLogs";
+var connectionstring = "azure_service_bus_connection_string";
+var queuename = "queue_name";
 
 var log = new LoggerConfiguration()
     .MinimumLevel.Information()
-    .WriteTo.AzureServiceBus(project, collection)
+    .WriteTo.AzureServiceBus(connectionstring, queue_name)
     .CreateLogger();
 
 ```
