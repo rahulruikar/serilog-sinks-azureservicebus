@@ -1,0 +1,57 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+  testConfiguration: 'Debug'
+
+steps: 
+
+- task: GitVersion@5
+  inputs:
+    runtime: 'core'
+    updateAssemblyInfo: true
+
+- task: DotNetCoreCLI@2
+  displayName: Restore
+  inputs:
+    command: restore
+    projects: '**/*.csproj'
+
+- task: DotNetCoreCLI@2
+  displayName: Build
+  inputs:
+    projects: '**/*.Tests.csproj'
+    arguments: '--configuration $(TestConfiguration)'
+
+- task: DotNetCoreCLI@2
+  displayName: Test
+  inputs:
+    command: test
+    projects: '**/*.csproj'
+    arguments: '--configuration $(TestConfiguration) --filter Category=UnitTest'
+
+- task: DotNetCoreCLI@2
+  displayName: Build
+  inputs:
+    projects: '**/*Serilog.Sinks.Firestore.csproj'
+    arguments: '--configuration $(BuildConfiguration)'
+
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet pack'
+  inputs:
+    projects: '**/*Serilog.Sinks.Firestore.csproj'
+    command: pack
+    versioningScheme: byBuildNumber
+
+- task: PublishBuildArtifacts@1
+  displayName: Publish package
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: Drop
+    publishLocation: 'Container'
