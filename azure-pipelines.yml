@@ -39,13 +39,13 @@ steps:
 - task: DotNetCoreCLI@2
   displayName: Build
   inputs:
-    projects: '**/*Serilog.Sinks.Firestore.csproj'
+    projects: '**/*Serilog.Sinks.AzureServiceBus.csproj'
     arguments: '--configuration $(BuildConfiguration)'
 
 - task: DotNetCoreCLI@2
   displayName: 'dotnet pack'
   inputs:
-    projects: '**/*Serilog.Sinks.Firestore.csproj'
+    projects: '**/*Serilog.Sinks.AzureServiceBus.csproj'
     command: pack
     versioningScheme: byBuildNumber
 
