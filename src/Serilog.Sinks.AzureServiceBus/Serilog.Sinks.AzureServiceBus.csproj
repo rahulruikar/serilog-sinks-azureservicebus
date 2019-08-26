@@ -1,9 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <RootNamespace>serilog_sinks_azureservicebus</RootNamespace>
+    <RootNamespace>Serilog.Sinks.AzureServiceBus</RootNamespace>
+    <ApplicationIcon />
+    <StartupObject />
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Authors>Rahul Ruikar</Authors>
+    <Company />
+    <Description>Serilog.Sinks.AzureServiceBus is a serilog sink that writes logs to a queue in Azure Service Bus</Description>
+    <RepositoryUrl>https://github.com/rahulruikar/serilog-sinks-azureservicebus</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
