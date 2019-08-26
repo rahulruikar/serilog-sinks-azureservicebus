@@ -26,19 +26,6 @@ steps:
 - task: DotNetCoreCLI@2
   displayName: Build
   inputs:
-    projects: '**/*.Tests.csproj'
-    arguments: '--configuration $(TestConfiguration)'
-
-- task: DotNetCoreCLI@2
-  displayName: Test
-  inputs:
-    command: test
-    projects: '**/*.csproj'
-    arguments: '--configuration $(TestConfiguration) --filter Category=UnitTest'
-
-- task: DotNetCoreCLI@2
-  displayName: Build
-  inputs:
     projects: '**/*Serilog.Sinks.AzureServiceBus.csproj'
     arguments: '--configuration $(BuildConfiguration)'
 
