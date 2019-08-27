@@ -1,4 +1,4 @@
-# Serilog.Sinks.AzureServiceBus
+# Serilog.Sinks.AzureServiceBus.Alternate
 
 Serilog.Sinks.AzureServiceBus is a Serilog sink that writes logs to a queue on Azure Service Bus.
 
@@ -9,7 +9,7 @@ Serilog.Sinks.AzureServiceBus is a Serilog sink that writes logs to a queue on A
 Using the dotnet cli:
 
 ```bash
-dotnet add package Serilog.Sinks.AzureServiceBus
+dotnet add package Serilog.Sinks.AzureServiceBus.Alternate
 ```
 
 ## Usage
@@ -36,7 +36,7 @@ If you find a bug or have a feature request, please report them in this reposito
 Please make sure to update tests as appropriate.
 
 ## License
-Serilog.Sinks.AzureServiceBus is under Apache 2.0 License.
+Serilog.Sinks.AzureServiceBus.Alternate is under Apache 2.0 License.
 
 This library utilises the following libraries under the Apache 2.0 license, which can be obtained from http://www.apache.org/licenses/LICENSE-2.0.
 
