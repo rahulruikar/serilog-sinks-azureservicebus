@@ -2,7 +2,7 @@
 using Serilog.Configuration;
 using Serilog.Core;
 using Serilog.Events;
-using Serilog.Sinks.AzureServiceBus;
+using Serilog.Sinks.AzureServiceBus.Alternate;
 using System;
 
 namespace Serilog
@@ -27,7 +27,7 @@ namespace Serilog
             }
             catch (Exception ex)
             {
-                Debugging.SelfLog.WriteLine($"Error configuring AzureServiceBus Sink");
+                Debugging.SelfLog.WriteLine($"Error configuring AzureServiceBus Sink : {ex.Message}");
                 ILogEventSink sink = new LoggerConfiguration().CreateLogger();
                 return loggerConfiguration.Sink(sink, restrictedToMinimumLevel);
             }
