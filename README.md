@@ -2,7 +2,7 @@
 
 Serilog.Sinks.AzureServiceBus.Alternate is a Serilog sink that writes logs to a queue on Azure Service Bus.
 
-[![Build Status](https://dev.azure.com/rahulruikar0957/SerilogSinkAzureServiceBus/_apis/build/status/rahulruikar.serilog-sinks-azureservicebus?branchName=master)](https://dev.azure.com/rahulruikar0957/SerilogSinkAzureServiceBus/_build/latest?definitionId=1&branchName=master) ![Nuget](https://img.shields.io/nuget/v/Serilog.Sinks.AzureServiceBus.Alternate?style=plastic)(https://www.nuget.org/packages/Serilog.Sinks.AzureServiceBus.Alternate)
+[![Build Status](https://dev.azure.com/rahulruikar0957/SerilogSinkAzureServiceBus/_apis/build/status/rahulruikar.serilog-sinks-azureservicebus?branchName=master)](https://dev.azure.com/rahulruikar0957/SerilogSinkAzureServiceBus/_build/latest?definitionId=1&branchName=master) ![Nuget](https://img.shields.io/nuget/v/Serilog.Sinks.AzureServiceBus.Alternate?style=plastic)
 
 ## Installation
 
