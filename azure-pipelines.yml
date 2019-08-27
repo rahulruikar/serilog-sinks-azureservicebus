@@ -26,13 +26,13 @@ steps:
 - task: DotNetCoreCLI@2
   displayName: Build
   inputs:
-    projects: '**/*Serilog.Sinks.AzureServiceBus.csproj'
+    projects: '**/*Serilog.Sinks.AzureServiceBus.Alternate.csproj'
     arguments: '--configuration $(BuildConfiguration)'
 
 - task: DotNetCoreCLI@2
   displayName: 'dotnet pack'
   inputs:
-    projects: '**/*Serilog.Sinks.AzureServiceBus.csproj'
+    projects: '**/*Serilog.Sinks.AzureServiceBus.Alternate.csproj'
     command: pack
     versioningScheme: byBuildNumber
 

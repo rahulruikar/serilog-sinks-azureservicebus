@@ -5,7 +5,7 @@ using System;
 using System.Text;
 using System.Threading;
 
-namespace Serilog.Sinks.AzureServiceBus
+namespace Serilog.Sinks.AzureServiceBus.Alternate
 {
     /// <summary>
     /// Writes log events as records to an Azure ServiceBus queue.
